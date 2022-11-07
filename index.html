@@ -31,7 +31,7 @@
         <h1 class="navbar-brand mx-auto mx-md-0">Easy QR Code Generator</h1>
       </div>
     </header>
-    <main class="container-fluid">
+    <!-- <main class="container-fluid">
       <div class="row row-cols-1 row-cols-md-2 min-vh-100">
         <div class="col p-3 mt-5 d-flex justify-content-center">
           <div
@@ -75,6 +75,52 @@
             >
           </form>
         </div>
+      </div>
+    </main> -->
+    <main
+      style="margin-bottom: -58px"
+      class="min-vh-100 min-vw-100 d-flex flex-column flex-md-row justify-content-between"
+    >
+      <div
+        class="mt-5 mt-md-0 pt-3 pt-md-0 pb-1 pb-md-0 flex-grow-1 d-flex justify-content-center align-content-center"
+      >
+        <div id="qr" class="m-auto" style="opacity: 1; transition: 0.5s all">
+          <img
+            id="placeholderImg"
+            src="img/qr-code-svgrepo-com.svg"
+            alt=""
+            class="w-100"
+            style="opacity: 0.5; transition: 0.5s all"
+          />
+        </div>
+      </div>
+
+      <div
+        class="bg-dark d-flex flex-column justify-content-start justify-content-md-center flex-grow-1"
+      >
+        <form
+          id="qrform"
+          class="w-75 mx-auto d-flex flex-column gap-4 gap-md-5 py-4"
+        >
+          <div class="input-group">
+            <span class="input-group-text text-bg-dark">URL</span>
+            <input
+              id="url"
+              type="text"
+              class="form-control"
+              placeholder="http://www.yoururl.com"
+              onfocus="this.value = ''"
+              required
+            />
+          </div>
+
+          <button type="submit" class="btn btn-outline-light">
+            Generate QR Code
+          </button>
+          <a id="download-btn" class="btn btn-outline-light disabled"
+            >Save QR Code</a
+          >
+        </form>
       </div>
     </main>
   </body>

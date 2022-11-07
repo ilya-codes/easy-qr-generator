@@ -18,7 +18,7 @@ const onGenerateSubmit = (e) => {
       const saveUrl = qr.querySelector("img").src;
       createLink(saveUrl);
     }, 50);
-  }, 600);
+  }, 500);
 };
 
 const generateQRCode = (url, size) => {
